@@ -4,7 +4,10 @@ import com.hhf.alaska.spring.boot.starter.zuul.common.refresh.AutoRefreshRouteJo
 import com.hhf.alaska.spring.boot.starter.zuul.common.refresh.RefreshRouteService;
 import com.hhf.alaska.spring.boot.starter.zuul.common.rule.DefaultZuulRouteRuleMatcher;
 import com.hhf.alaska.spring.boot.starter.zuul.common.rule.IZuulRouteRuleMatcher;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
@@ -23,9 +26,16 @@ import javax.sql.DataSource;
  */
 @Configuration
 @EnableScheduling
-@ConditionalOnBean(DataSource.class)
+@AutoConfigureAfter(value = DataSource.class)
+//@ConditionalOnBean(value = DataSource.class)
 @EnableConfigurationProperties(ZuulRouteDatabaseProperties.class)
 public class ZuulRouteDatabaseAutoConfiguration {
+
+	public final static Logger logger = LoggerFactory.getLogger(ZuulRouteDatabaseAutoConfiguration.class);
+
+	public ZuulRouteDatabaseAutoConfiguration(){
+		logger.info("dynamic route loaded");
+	}
 
 	@Autowired
 	private ZuulProperties zuulProperties;
@@ -46,7 +56,7 @@ public class ZuulRouteDatabaseAutoConfiguration {
 	@ConditionalOnBean(JdbcTemplate.class)
 	@ConditionalOnMissingBean(ZuulRouteDatabaseLocator.class)
 	public ZuulRouteDatabaseLocator zuulRouteDatabaseLocator() {
-		return new ZuulRouteDatabaseLocator(this.server.getServlet().getPath(), this.zuulProperties);
+		return new ZuulRouteDatabaseLocator(this.server.getServlet().getServletPrefix(), this.zuulProperties);
 	}
 	
 	@Bean

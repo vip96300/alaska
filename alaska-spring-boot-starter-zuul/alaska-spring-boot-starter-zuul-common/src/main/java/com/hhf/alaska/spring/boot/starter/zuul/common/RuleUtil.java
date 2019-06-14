@@ -17,7 +17,8 @@ public class RuleUtil {
 	static {
 		ScriptEngine engine = new ScriptEngineManager().getEngineByName("javascript");
 		compilable = (Compilable) engine;
-		bindings = engine.createBindings(); // Local级别的Binding
+		// Local级别的Binding
+		bindings = engine.createBindings();
 	}
 
 	public static String eval(String str, Map<String, Object> params) {

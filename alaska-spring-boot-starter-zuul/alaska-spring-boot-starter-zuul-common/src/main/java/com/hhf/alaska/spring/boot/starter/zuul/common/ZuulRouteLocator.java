@@ -123,7 +123,7 @@ public abstract class ZuulRouteLocator extends SimpleRouteLocator implements Ref
 				zuulRoute.setUrl(locateRoute.getUrl());
 				logger.info("add zuul route: " + JsonUtils.toJson(zuulRoute));
 			} catch (Exception e) {
-				logger.error("=============load zuul route info from db with error==============", e);
+				logger.error("load zuul route info from db with error", e);
 			}
 			routes.put(zuulRoute.getPath(), zuulRoute);
 		}

@@ -5,27 +5,26 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author huang hong fei
  */
-@ConfigurationProperties(prefix="spring.zuul.route.db")
+@ConfigurationProperties(prefix="alaska.spring.boot.starter.zuul.route")
 public class ZuulRouteDatabaseProperties {
 
-	private String tableName = "zuul_route_config";
+	private String routeTableName = "alaska_zuul_route";
 	
-	private String ruleTableName = "zuul_route_config_rule";
-	
-	public String getTableName() {
-		return tableName;
+	private String routeRuleTableName = "alaska_zuul_route_rule";
+
+	public String getRouteTableName() {
+		return routeTableName;
 	}
 
-	public void setTableName(String tableName) {
-		this.tableName = tableName;
+	public void setRouteTableName(String routeTableName) {
+		this.routeTableName = routeTableName;
 	}
 
-	public String getRuleTableName() {
-		return ruleTableName;
+	public String getRouteRuleTableName() {
+		return routeRuleTableName;
 	}
 
-	public void setRuleTableName(String ruleTableName) {
-		this.ruleTableName = ruleTableName;
+	public void setRouteRuleTableName(String routeRuleTableName) {
+		this.routeRuleTableName = routeRuleTableName;
 	}
-	
 }

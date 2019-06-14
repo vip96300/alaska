@@ -1,5 +1,6 @@
 spring:
   datasource:
+    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://192.168.0.135:3306/xcwl_b2c_gateway?useSSL=false&useUnicode=true&characterEncoding=utf8
     username: root
     password: 1Mtg_izQtZow
@@ -14,3 +15,12 @@ eureka:
     enabled: true
     service-url:
       defaultZone: http://${eureka.server.user}:${eureka.server.password}@${eureka.server.address}/eureka
+zuul:
+  ignored-services: "*"
+alaska:
+  spring:
+    boot:
+      starter:
+        zuul:
+          route:
+            refresh-cron: 0 * * * * ?

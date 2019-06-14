@@ -26,7 +26,7 @@ public class ZuulClientFilter extends ZuulFilter {
 	public Object run() {
 		RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        logger.info(String.format("%s request to %s", request.getMethod(), request.getRequestURL().toString()));
+        logger.info("{} request to {}",request.getMethod(),request.getRequestURL());
         return true;
 	}
 

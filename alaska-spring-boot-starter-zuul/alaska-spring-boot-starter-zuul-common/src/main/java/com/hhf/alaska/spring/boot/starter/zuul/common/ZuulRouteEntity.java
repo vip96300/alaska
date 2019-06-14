@@ -60,7 +60,7 @@ public class ZuulRouteEntity implements Serializable {
 	 * authentication data. If using a physical URL outside your own domain,
 	 * then generally it would be a bad idea to leak user credentials.
 	 */
-	private Set<String> sensitiveHeadersSet = new LinkedHashSet<>();
+	private Set<String> sensitiveHeadersSet = new LinkedHashSet<String>();
 
 	/** 字符串格式，与sensitiveHeaders对应，多个用逗号隔开 */
 	private String sensitiveHeaders;
