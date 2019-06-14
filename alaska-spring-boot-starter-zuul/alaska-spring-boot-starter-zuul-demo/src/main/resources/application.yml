@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: alaska-spring-boot-starter-zuul-demo
+  profiles:
+    active: tes
+server:
+  port: 8080
