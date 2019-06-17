@@ -1,6 +1,6 @@
 spring:
   application:
-    name: alaska-spring-boot-starter-zuul-demo
+    name: alaska-spring-boot-starter-maven.com.hhf.alaska.spring-boot-starter-zuul-demo
   profiles:
     active: tes
 server:

@@ -149,7 +149,7 @@ public class ZuulRouteEntity implements Serializable {
 	public void setSensitiveHeaders(String sensitiveHeaders) {
 		this.sensitiveHeaders = sensitiveHeaders;
 		if (!StringUtils.isEmpty(sensitiveHeaders)) {
-			this.sensitiveHeadersSet = new LinkedHashSet<>(Arrays.asList(sensitiveHeaders.split(",")));
+			this.sensitiveHeadersSet = new LinkedHashSet<String>(Arrays.asList(sensitiveHeaders.split(",")));
 		} else {
 			this.sensitiveHeadersSet = new LinkedHashSet<String>();
 		}

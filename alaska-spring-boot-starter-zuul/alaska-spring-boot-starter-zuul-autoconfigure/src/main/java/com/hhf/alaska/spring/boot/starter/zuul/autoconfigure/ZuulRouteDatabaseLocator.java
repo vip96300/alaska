@@ -58,7 +58,7 @@ public class ZuulRouteDatabaseLocator extends ZuulRouteLocator {
 				}
 			}
 		} catch (DataAccessException e) {
-			logger.error("load zuul route from db exception", e);
+			logger.error("load maven.com.hhf.alaska.spring-boot-starter-zuul route from db exception", e);
 		}
 		return handle(locateRouteList);
 	}

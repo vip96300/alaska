@@ -49,7 +49,7 @@ public abstract class ZuulRouteLocator extends SimpleRouteLocator implements Ref
 		// 从db中加载路由信息
 		routesMap.putAll(loadLocateRoute());
 		// 优化一下配置
-		LinkedHashMap<String, ZuulRoute> values = new LinkedHashMap<>();
+		LinkedHashMap<String, ZuulRoute> values = new LinkedHashMap<String, ZuulRoute>();
 		for (Map.Entry<String, ZuulRoute> entry : routesMap.entrySet()) {
 			String path = entry.getKey();
 			// Prepend with slash if not already present.
@@ -105,7 +105,7 @@ public abstract class ZuulRouteLocator extends SimpleRouteLocator implements Ref
 		if(CollectionUtils.isEmpty(locateRouteList)){
 			return null;
 		}
-		Map<String, ZuulRoute> routes = new LinkedHashMap<>();
+		Map<String, ZuulRoute> routes = new LinkedHashMap<String, ZuulRoute>();
 		for (ZuulRouteEntity locateRoute : locateRouteList) {
 			if (StringUtils.isEmpty(locateRoute.getPath())|| !locateRoute.isEnable()|| (StringUtils.isEmpty(locateRoute.getUrl()) && StringUtils.isEmpty(locateRoute.getServiceId()))) {
 				continue;
@@ -121,9 +121,9 @@ public abstract class ZuulRouteLocator extends SimpleRouteLocator implements Ref
 				zuulRoute.setServiceId(locateRoute.getServiceId());
 				zuulRoute.setStripPrefix(locateRoute.isStripPrefix());
 				zuulRoute.setUrl(locateRoute.getUrl());
-				logger.info("add zuul route: " + JsonUtils.toJson(zuulRoute));
+				logger.info("add maven.com.hhf.alaska.spring-boot-starter-zuul route: " + JsonUtils.toJson(zuulRoute));
 			} catch (Exception e) {
-				logger.error("load zuul route info from db with error", e);
+				logger.error("load maven.com.hhf.alaska.spring-boot-starter-zuul route info from db with error", e);
 			}
 			routes.put(zuulRoute.getPath(), zuulRoute);
 		}
