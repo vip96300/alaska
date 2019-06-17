@@ -7,7 +7,18 @@
     <groupId>com.hhf.alaska.spring.boot.starter.durid</groupId>
     <artifactId>alaska-spring-boot-starter-durid</artifactId>
     <version>1.0.0</version>
+
+    <modules>
+        <module>alaska-spring-boot-starter-durid-autoconfigure</module>
+        <module>alaska-spring-boot-starter-durid-starter</module>
+        <module>alaska-spring-boot-starter-durid-demo</module>
+    </modules>
+
     <packaging>pom</packaging>
+
+    <properties>
+        <durid.version>1.1.15</durid.version>
+    </properties>
 
     <dependencyManagement>
         <dependencies>
