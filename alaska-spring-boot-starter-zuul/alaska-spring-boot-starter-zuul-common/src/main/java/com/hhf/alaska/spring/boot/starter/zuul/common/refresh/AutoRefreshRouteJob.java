@@ -17,9 +17,9 @@ public class AutoRefreshRouteJob {
 	@Autowired
 	private RefreshRouteService refreshRouteService;
 
-	@Scheduled(cron = "${alaska.spring.boot.starter.maven.com.hhf.alaska.spring-boot-starter-zuul.route.refresh-cron:0/30 * * * * ?}")
+	@Scheduled(cron = "${alaska.spring.boot.starter.route.refresh-cron:0/30 * * * * ?}")
 	public void run() {
-		logger.info("refresh maven.com.hhf.alaska.spring-boot-starter-zuul route");
+		logger.info("refresh route");
 		refreshRouteService.refreshRoute();
 	}
 

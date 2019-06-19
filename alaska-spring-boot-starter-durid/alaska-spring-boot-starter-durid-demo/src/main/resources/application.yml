@@ -1,6 +1,6 @@
 spring:
   application:
-    name: alaska-spring-boot-starter-durid-demo
+    name: alaska-maven.com.hhf.alaska.spring-boot-starter-cache-demo
   profiles:
     active: tes
 server:

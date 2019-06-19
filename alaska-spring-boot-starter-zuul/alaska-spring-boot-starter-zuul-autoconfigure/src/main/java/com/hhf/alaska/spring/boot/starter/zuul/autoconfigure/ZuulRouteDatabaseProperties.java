@@ -5,11 +5,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * @author huang hong fei
  */
-@ConfigurationProperties(prefix="alaska.spring.boot.starter.maven.com.hhf.alaska.spring-boot-starter-zuul.route")
+@ConfigurationProperties(prefix="alaska.spring.boot.starter.route")
 public class ZuulRouteDatabaseProperties {
 
 	private String routeTableName = "alaska_zuul_route";
-	
+
 	private String routeRuleTableName = "alaska_zuul_route_rule";
 
 	public String getRouteTableName() {

@@ -17,12 +17,10 @@ public class ZuulClientFilter extends ZuulFilter {
 	
 	private final Logger logger = LoggerFactory.getLogger(ZuulClientFilter.class);
 
-	@Override
 	public boolean shouldFilter() {
 		return true;
 	}
 
-	@Override
 	public Object run() {
 		RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();

@@ -1,0 +1,3 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.hhf.alaska.spring.boot.starter.cache.autoconfigure.redis.RedisCacheAutoConfiguration

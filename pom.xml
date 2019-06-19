@@ -12,6 +12,7 @@
     <modules>
         <module>alaska-spring-boot-starter-zuul</module>
         <module>alaska-spring-boot-starter-durid</module>
+        <module>alaska-spring-boot-starter-cache</module>
     </modules>
 
     <properties>

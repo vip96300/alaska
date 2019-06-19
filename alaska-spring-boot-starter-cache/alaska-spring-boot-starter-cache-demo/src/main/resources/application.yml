@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: alaska-spring-boot-starter-cache-demo
+  profiles:
+    active: tes
+server:
+  port: 8082
