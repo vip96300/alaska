@@ -1,2 +1,2 @@
 # alaska
-spring boot starter
+spring boot starter 2.x
