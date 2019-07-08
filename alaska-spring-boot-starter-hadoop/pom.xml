@@ -5,8 +5,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>com.hhf.alaska.spring.boot.starter</groupId>
+        <artifactId>alaska-spring-boot-starter-parent</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
     <groupId>com.hhf.alaska.spring.boot.starter.hadoop</groupId>
-    <artifactId>akaska-spring-boot-starter-hadoop</artifactId>
+    <artifactId>alaska-spring-boot-starter-hadoop</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <modules>

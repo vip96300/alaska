@@ -13,7 +13,8 @@
         <module>alaska-spring-boot-starter-zuul</module>
         <module>alaska-spring-boot-starter-durid</module>
         <module>alaska-spring-boot-starter-cache</module>
-        <module>akaska-spring-boot-starter-hadoop</module>
+        <module>alaska-spring-boot-starter-hadoop</module>
+        <module>alaska-spring-boot-starter-fastdfs</module>
     </modules>
 
     <properties>
